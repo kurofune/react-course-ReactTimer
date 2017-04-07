@@ -1,0 +1,30 @@
+{
+  "env": {
+    "browser": true,
+    "es6": true,
+    "node": true,
+    "mocha": true
+  },
+  "globals": {
+    "jQuery": true
+  },
+  "extends": "airbnb",
+  "parser": "babel-eslint",
+  "rules": {
+    // indentation
+    "indent": ["error", 2],
+
+    // importing
+    "import/no-extraneous-dependencies": 0,
+    "import/no-unresolved": 0,
+    "import/no-webpack-loader-syntax": 0,
+
+    // functions
+    "arrow-body-style": 0,
+
+    // react
+    "react/jsx-indent": ["error", 2],
+    "react/jsx-indent-props": ["error", 2],
+    "react/prefer-stateless-function": 1
+  }
+}
