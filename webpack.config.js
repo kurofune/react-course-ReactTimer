@@ -1,5 +1,8 @@
 const webpack = require('webpack');
 
+// suppress the deprecation warning currently happening
+process.noDeprecation = true;
+
 module.exports = {
   entry: [
     'script-loader!jquery/dist/jquery.min.js',
@@ -21,9 +24,11 @@ module.exports = {
   },
   resolve: {
     alias: {
+      applicationStyles: `${__dirname}/app/styles/app.scss`,
       Main: `${__dirname}/app/components/Main.jsx`,
       Navigation: `${__dirname}/app/components/Navigation.jsx`,
-      applicationStyles: `${__dirname}/app/styles/app.scss`
+      Countdown: `${__dirname}/app/components/Countdown.jsx`,
+      Timer: `${__dirname}/app/components/Timer.jsx`,
     },
     modules: ['node_modules'],
     extensions: ['.js', '.jsx'],
@@ -41,5 +46,5 @@ module.exports = {
       },
     ],
   },
-  devtool: 'cheap-module-eval-source-map'
+  devtool: 'cheap-module-eval-source-map',
 };
